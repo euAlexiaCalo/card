@@ -42,6 +42,7 @@ Para visualizar ou modificar este projeto, você só precisa de:
 ```bash
 git clone [https://github.com/seu-usuario/seu-repo.git](https://github.com/seu-usuario/seu-repo.git)
 cd seu-repo
+```
 
 ### Opção 2 — Download
 - Baixe o arquivo .zip do repositório.
