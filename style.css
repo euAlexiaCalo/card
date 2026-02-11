@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --theme-color-one: rgb(176, 168, 230);
+    --theme-color-two: rgb(144, 186, 255);
+    --theme-color-three: rgb(172, 204, 255);
+    --theme-color-blue: rgb(64, 130, 236);
+    --theme-color-purple: rgb(200, 192, 255);
+    --dark-theme-color-one: rgb(64, 48, 100);
+    --dark-theme-color-two: rgb(32, 68, 124);
+    --dark-theme-color-three: rgb(98, 82, 140);
+    --dark-theme-color-blue: rgb(144, 186, 255);
+    --dark-theme-color-purple: rgb(120, 104, 240);
+    --card-dark-theme-color: rgb(10, 6, 20);
+    --gray-shadow: rgba(110, 110, 110, 0.4);
+    --black-shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* ESTILIZAÇÃO DA PÁGINA */
+.theme {
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    background: linear-gradient(to right,
+            var(--theme-color-one) 40%,
+            var(--theme-color-two));
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.darkTheme {
+    background: linear-gradient(to right,
+            var(--dark-theme-color-one) 40%,
+            var(--dark-theme-color-two));
+}
+
+
+main {
+    padding: 20px;
+}
+
+/* CARD DO USUÁRIO */
+
+#card-usuario {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+.darkTheme #card-usuario {
+    background: var(--card-dark-theme-color);
+}
+
+/* CONTAINER DOS BOTÕES DE AÇÃO */
+#container-acoes {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+}
+
+.btn-acao {
+    padding: 10px 20px;
+    background: var(--theme-color-three);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 5px 15px var(--gray-shadow);
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* EFEITO AO PASSAR O MOUSE POR CIMA DO BOTÃO */
+.btn-acao:hover {
+    background: var(--theme-color-two);
+}
+
+.darkTheme .btn-acao {
+    color: whitesmoke;
+    background: var(--dark-theme-color-three);
+    box-shadow: 0px 5px 15px var(--black-shadow);
+}
+
+.darkTheme btn-acao:hover {
+    background: linear-gradient(to right,
+            var(--dark-theme-color-two) 40%,
+            var(--dark-theme-color-one));
+}
+
+/* CONTEÚDO DO CARD DO USUÁRIO */
+#conteudo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.darkTheme #conteudo-card {
+    color: white;
+}
+
+/* CÍRCULO DAS INICIAIS */
+#avatar {
+    background: var(--theme-color-one);
+    border-radius: 50%;
+    width: 50%;
+    min-width: 100px;
+    max-width: 150px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1; /*mantém a proporção do círculo, mesmo que a largura seja alterada*/
+}
+
+.darkTheme #avatar {
+    background: var(--dark-theme-color-one);
+}
+
+/* INICIAIS DENTRO DO CÍRCULO */
+span {
+    font-size: 50px;
+    text-transform: uppercase;
+    margin: 0;
+    color: black;
+}
+
+.darkTheme span {
+    color: white;
+}
+
+
+/* NOME DO USUÁRIO */
+.usuario {
+    color: #333;
+}
+
+.darkTheme .usuario {
+    color: white;
+}
+
+/*COMENTADO NO CÒDIGO*/
+.container-botoes {
+    display: flex;
+    gap: 20px;
+}
+
+/* PROFISSÃO DO USUÁRIO */
+.profissao {
+    color: var(--theme-color-blue);
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.darkTheme .profissao {
+    color: var(--dark-theme-color-blue);
+}
+
+/* DESCRIÇÃO DO USUÁRIO */
+.descricao {
+    color: #666;
+    line-height: 1.5;
+    padding: 0 10px;
+    font-size: 1.2rem;
+}
+
+.darkTheme .descricao {
+    color: rgb(200, 200, 200);
+}
+
+/*COMENTADO*/
+.descricaoInvisivel {
+    display: none;
+}
+
+/* TÍTULO DA SEÇÃO DE HABILIDADES */
+.titulo-habilidades {
+    margin: 20px 0px 10px 0px;
+    color: #333;
+}
+
+.darkTheme .titulo-habilidades {
+    color: whitesmoke;
+}
+
+/* LISTA DE HABILIDADES DO USUÁRIO */
+.lista-habilidades {
+    padding: 0;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style-type: none;
+}
+
+/* ITEM DE HABILIDADE DO USUÁRIO */
+.item-habilidade {
+    padding: 8px 15px;
+    flex-wrap: wrap;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 50px;
+    background-color: rgb(248, 247, 246);
+    font-size: 14px;
+    color: var(--theme-color-blue);
+}
+
+.darkTheme .item-habilidade {
+    background-color: rgb(30, 30, 30);
+    border: 1px solid rgb(80, 80, 80);
+    color: var(--dark-theme-color-blue);
+}
+
+/* BOTÃO DE CONTATO */
+.btn-contato {
+    padding: 15px 40px;
+    background: linear-gradient(to right,
+            var(--theme-color-purple) 40%,
+            var(--theme-color-blue));
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 5px 10px var(--gray-shadow);
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.darkTheme .btn-contato {
+    color: whitesmoke;
+    background: linear-gradient(to right,
+            var(--dark-theme-color-three) 40%,
+            var(--dark-theme-color-purple));
+    box-shadow: 0px 5px 10px var(--black-shadow);
+}
+ 
