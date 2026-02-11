@@ -89,6 +89,7 @@ cd seu-repo
 ├─ index.html
 ├─ style.css
 └─ card.js
+```
 
 ---
 
